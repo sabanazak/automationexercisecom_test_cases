@@ -19,9 +19,7 @@ public class ScreenshotUtilities {
 
     //Base Dir with ClassName
     public static <T> String getScreenshotBaseDirWithClassName(Class<T> sourceClass) {
-        String imageDir=System.getProperty("user.dir");
-        imageDir += "/test-outputs/" + sourceClass.getSimpleName() + "/Screenshots/";
-        return imageDir;
+        return  AppsUtilityFunctions.getReportsBaseDir(sourceClass,"Screenshots");
     }
 
     public static void takeScreenshotOfPage(WebDriver driver) throws IOException {
